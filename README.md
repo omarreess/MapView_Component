@@ -1,16 +1,43 @@
-# mapview_mvvm
+# MapView Component
+A Clean Google Map Component Implementing MVVM Build with Flutter SDK ( SOLID Principles Used )
 
-A new Flutter application.
 
-## Getting Started
+ 
+## App's Code Architecture
+- Code Files separated by Packages by features Concept 
 
-This project is a starting point for a Flutter application.
+- Each layer in MVVM separeated from upper layer , dont know about its Upper Layer ( View -> VM -> Repo )
+  VM dont care about View dont have View Reference , Just subscribing with VM's Rx Subject which callback with any updates
 
-A few resources to get you started if this is your first Flutter project:
+- Testing is so easly , you can test Repo separately & test VM separately without View 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+</p>
+<p float="left">
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/mvvm%20arch1.png" width="350" />
+   <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/mvvm%20arch3.png" width="350" />  
+</p>
+
+![alt text](https://github.com/omarreess/MapView_Component/blob/master/screenshot/mvvm.png)
+
+
+## App's UI Screen
+<p float="left">
+  <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/mapview_ui.jpg" width="315" />
+ </p>
+ 
+ 
+## Code Features 
+Some of SOLID Principles applied :
+
+ - D Dependency Inversion Principle as every Function is injected by dependendt data paramter inseatd of closing it in the scope
+   it facliate the unit testing of it 
+
+ - I Interface Segregation Principle as each layer has its own interface , so it can be Multi-used by Polymarpism concept for future use 
+
+ - S Single-Responsibility Principle as each Function for only one job
+ 
+
+ 
+ 
+ 
