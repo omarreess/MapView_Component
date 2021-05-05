@@ -4,7 +4,7 @@ A Clean Google Map Component Implementing MVVM Build with Flutter SDK ( SOLID Pr
 
  
 ## App's Code Architecture
-- Code Files separated by Packages by features Concept 
+- Code Files separated by Package-by-feature Concept 
 
 - Each layer in MVVM separeated from upper layer , dont know about its Upper Layer ( View -> VM -> Repo )
   VM dont care about View dont have View Reference , Just subscribing with VM's Rx Subject which callback with any updates
