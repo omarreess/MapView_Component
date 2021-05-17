@@ -14,10 +14,10 @@ import 'mapview_widgets.dart';
 class MapViewScreen extends StatelessWidget  implements MapViewViewContract{
 
   //
-  Future subscriptionVmIsDone;
-  BehaviorSubject markersListStream ;
-  MapViewViewModelImplementer mapViewModel;
-  GoogleMapController mapController     ;
+  Future? subscriptionVmIsDone;
+  late BehaviorSubject markersListStream ;
+  late MapViewViewModelImplementer mapViewModel;
+  GoogleMapController? mapController     ;
 
 
 
@@ -37,7 +37,7 @@ class MapViewScreen extends StatelessWidget  implements MapViewViewContract{
 
     return Scaffold(
       floatingActionButton: changePositionBtn(changeMarkerPosition),
-      appBar: appBarWidget(),
+      appBar: appBarWidget() as PreferredSizeWidget?,
       body:
       FutureBuilder(
         future: subscriptionVmIsDone,
@@ -47,7 +47,7 @@ class MapViewScreen extends StatelessWidget  implements MapViewViewContract{
             builder:(BuildContext context, snapshot) {
                 if(snapshot.hasData){
 
-                  return  mapWidget( snapshot.data  ,  initMapController , mapController);
+                  return  mapWidget( snapshot.data as Set<Marker>  ,  initMapController , mapController);
               }
               return loadingWidget();
             }

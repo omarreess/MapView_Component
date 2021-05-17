@@ -6,14 +6,14 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class MarkerModel {
 
- String id , title  , iconImg;
- LatLng position;
- double  positionLat, positionLong ;
- BitmapDescriptor icon ;
+ String? id , title  , iconImg;
+ LatLng? position;
+ double?  positionLat, positionLong ;
+ BitmapDescriptor? icon ;
 
  MarkerModel(
  {
-   @required this.id ,
+   required this.id ,
     this.title ,
 
    this.position , this.icon , this.iconImg , this.positionLat ,

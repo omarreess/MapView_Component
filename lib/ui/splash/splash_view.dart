@@ -11,14 +11,15 @@ import 'splash_widgets.dart';
 class SplashScreenView extends StatelessWidget {
 
 
-  SplashViewModel splashViewModel;
+  late SplashViewModel splashViewModel;
 
   //view's data
-  String logoImgPath  ;
+   late  String logoImgPath   ;
 
   //init ViewModel
   SplashScreenView () {
-    splashViewModel = SplashViewModel();
+
+  splashViewModel = SplashViewModel();
   }
 
   //subscribing ViewModel's Rx Subject
@@ -26,7 +27,8 @@ class SplashScreenView extends StatelessWidget {
       splashViewModel.subscribeSubject(
             (newValue){
           logoImgPath = newValue;
-        });
+         });
+
    }
 
 

@@ -11,7 +11,7 @@ Widget changePositionBtn (Function incPostion){
   return          FloatingActionButton . extended(
     label:Text('Change Position') ,
 
-    onPressed: incPostion,
+    onPressed: incPostion as void Function()?,
     backgroundColor: darkColour,
     icon: Icon(Icons.location_on_outlined , ),
 
@@ -32,7 +32,7 @@ Widget appBarWidget(){
   ;
 }
 
-Widget mapWidget(Set<Marker> markersList , Function  initMapController , GoogleMapController mapController ){
+Widget mapWidget(Set<Marker> markersList , Function  initMapController , GoogleMapController? mapController ){
   //safe call on map controller to update Widget Camera Pos
   mapController?.animateCamera(
     CameraUpdate.newCameraPosition(
@@ -41,7 +41,7 @@ Widget mapWidget(Set<Marker> markersList , Function  initMapController , GoogleM
   ),);
 
   return   GoogleMap(
-    onMapCreated: initMapController,
+    onMapCreated: initMapController as void Function(GoogleMapController)?,
 
     mapType: MapType.hybrid,
 

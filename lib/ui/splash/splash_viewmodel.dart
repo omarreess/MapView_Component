@@ -17,7 +17,7 @@ class SplashViewModel {
 
 
   //rx Subjects
-  BehaviorSubject logoImgPath  ;
+  late BehaviorSubject logoImgPath  ;
 
   //init
   SplashViewModel () {
@@ -28,7 +28,7 @@ class SplashViewModel {
   }
 
   void  subscribeSubject (Function function)   {
-      logoImgPath.stream.listen(function);
+      logoImgPath.stream.listen(function as void Function(dynamic)?);
   }
 
   void updateSubject(String value){

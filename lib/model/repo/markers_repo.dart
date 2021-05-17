@@ -15,13 +15,13 @@ class MarkersRepo  {
 
 
 //rx Subjects
-  BehaviorSubject markerModelsSubject ;
-  List markerModelsList ;
+  late BehaviorSubject markerModelsSubject ;
+  List? markerModelsList ;
 
   //init
   MarkersRepo () {
-     markerModelsSubject =   BehaviorSubject<List<Marker>>() ;
-    markerModelsList = List <Marker>();
+     markerModelsSubject =   BehaviorSubject<List<Marker>?>() ;
+    markerModelsList = List <Marker>.empty (growable: true);
     initData();
 
 
@@ -30,7 +30,7 @@ class MarkersRepo  {
   //getting data from constants
   void initData()
   {
-    markerModelsList
+    markerModelsList!
       ..add(Marker(markerId: MarkerId(markterPostions0.toString()) , position:markterPostions0, ) )
       ..add(Marker(markerId: MarkerId(markterPostions1.toString()) , position:markterPostions1 ))
       ..add(Marker(markerId: MarkerId(markterPostions2.toString()) ,position:markterPostions2 ))
@@ -44,18 +44,18 @@ class MarkersRepo  {
   void incMarkerPosition()
   {
     markterPostions0 = LatLng(51.807979-_incVar, 10.340948+_incVar);
-    markerModelsList.removeAt(0);
-    markerModelsList.insert(0,Marker(markerId: MarkerId(markterPostions0.toString()) , position:markterPostions0, ));
+    markerModelsList!.removeAt(0);
+    markerModelsList!.insert(0,Marker(markerId: MarkerId(markterPostions0.toString()) , position:markterPostions0, ));
      updateSubject(markerModelsList);
     _incVar+=0.002;
 
   }
 
   void  subscribeSubject (Function function) async {
-    markerModelsSubject.stream.listen(function);
+    markerModelsSubject.stream.listen(function as void Function(dynamic)?);
   }
 
-  void updateSubject( List markerModelsList ){
+  void updateSubject( List? markerModelsList ){
      markerModelsSubject.add(markerModelsList) ;
 
   }

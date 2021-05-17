@@ -11,13 +11,13 @@ import 'mapview_viewmodel_contract.dart';
 
   class MapViewViewModelImplementer implements MapViewViewModelContract{
 
-  MarkersRepo markersRepo;
-  Future _subscriptionRepoIsDone;
-  Future _bindingMarkerIconIsDone;
-  BitmapDescriptor markerIcon;
+  late MarkersRepo markersRepo;
+  Future? _subscriptionRepoIsDone;
+  Future? _bindingMarkerIconIsDone;
+  late BitmapDescriptor markerIcon;
 
   //rx Subjects
-  BehaviorSubject markersRepoSubject  ;
+  late BehaviorSubject markersRepoSubject  ;
 
   void disposeVmSubjects(){}
   void disposeRepoSubjects(){}
@@ -45,7 +45,7 @@ import 'mapview_viewmodel_contract.dart';
   Future<void> subscribeRepoSubject()  async{
     await _bindingMarkerIconIsDone;
 
-   await markersRepo.subscribeSubject(
+   markersRepo.subscribeSubject(
            (event ){
 
 
@@ -60,7 +60,7 @@ import 'mapview_viewmodel_contract.dart';
 
     (oldList as List ).forEach((element) {
       newMarkersList.add(
-          Marker(markerId:( element as Marker).markerId , icon: markerIcon , position: ( element as Marker).position ));
+          Marker(markerId:( element as Marker).markerId , icon: markerIcon , position:  element.position ));
     }
     );
     return newMarkersList;
@@ -68,7 +68,7 @@ import 'mapview_viewmodel_contract.dart';
   @override
  Future<void>   subscribeVmSubjects(Function fun) async {
     await _subscriptionRepoIsDone;
-    return markersRepoSubject.stream.listen(fun);
+    return markersRepoSubject.stream.listen(fun as void Function(dynamic)?).asFuture();
    }
 
 
