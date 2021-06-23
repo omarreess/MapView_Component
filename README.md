@@ -30,10 +30,11 @@ A Clean Google Map Component Implementing MVVM Build with Flutter SDK ( SOLID Pr
 ## Code Features 
 Some of SOLID Principles applied :
 
- - D Dependency Inversion Principle as every Function is injected by dependent data paramter instead of closing it in the scope
-   it facliate the unit testing of it 
+ - D Dependency Inversion Principle as every Function depends on Abstraction & injected by dependent paramter instead of closing it in the scope ,
+   it makes the code testable for unit-testing assertion 
 
- - I Interface Segregation Principle as each layer has its own interface , so it can be Multi-used by Polymarpism concept for future use 
+ - I Interface Segregation Principle as each layer has its own interface that contain only primary functions for Implementer classes ,
+   so there on unneeded Override for child classes  
 
  - S Single-Responsibility Principle as each Function for only one job
  
