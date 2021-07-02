@@ -2,7 +2,7 @@ import 'dart:core';
 import 'dart:core';
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:mapview_mvvm/model/constants.dart';
+import 'package:mapview_mvvm/config/constants.dart';
 import 'package:mapview_mvvm/model/repo/markers_repo.dart';
 import 'package:mapview_mvvm/util/repaint_marker_ic.dart';
 import 'package:rxdart/subjects.dart';
@@ -75,7 +75,9 @@ import 'mapview_viewmodel_contract.dart';
   @override
   Future<void> bindMarkerIcon() {
    return getMarkerIconResized(markerIconImgPath).then((value) {
+     
       markerIcon=value;
+      
     }
     );  }
 }

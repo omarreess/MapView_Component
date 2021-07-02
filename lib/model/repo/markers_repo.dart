@@ -2,7 +2,7 @@
 
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:mapview_mvvm/model/constants.dart';
+import 'package:mapview_mvvm/config/constants.dart';
 import 'package:mapview_mvvm/model/pojo/marker_pojo.dart';
 import 'package:rxdart/subjects.dart';
 

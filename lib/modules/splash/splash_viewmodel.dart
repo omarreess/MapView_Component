@@ -1,7 +1,7 @@
 
 
 
-import 'package:mapview_mvvm/model/constants.dart';
+import 'package:mapview_mvvm/config/constants.dart';
 import 'package:rxdart/subjects.dart';
 
 class SplashViewModel {

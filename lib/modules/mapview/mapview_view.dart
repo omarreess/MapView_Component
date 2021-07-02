@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:mapview_mvvm/model/constants.dart';
-import 'package:mapview_mvvm/ui/mapview/mapview_viewmodel_implementer.dart';
+import 'package:mapview_mvvm/config/constants.dart';
+import 'package:mapview_mvvm/modules/mapview/mapview_viewmodel_implementer.dart';
 import 'package:mapview_mvvm/util/repaint_marker_ic.dart';
 import 'package:rxdart/subjects.dart';
 

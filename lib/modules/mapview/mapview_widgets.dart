@@ -1,9 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:mapview_mvvm/model/constants.dart';
-import 'package:mapview_mvvm/ui/mapview/mapview_view_contract.dart';
-import 'package:mapview_mvvm/ui/mapview/mapview_viewmodel_contract.dart';
+import 'package:mapview_mvvm/config/app_theme.dart';
+import 'package:mapview_mvvm/config/constants.dart';
+import 'package:mapview_mvvm/modules/mapview/mapview_view_contract.dart';
+import 'package:mapview_mvvm/modules/mapview/mapview_viewmodel_contract.dart';
 
 import 'mapview_view.dart';
 

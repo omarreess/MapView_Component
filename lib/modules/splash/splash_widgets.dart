@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mapview_mvvm/model/constants.dart';
+import 'package:mapview_mvvm/config/app_theme.dart';
+import 'package:mapview_mvvm/config/constants.dart';
 
 Widget splashBodyWidget(String logoPath)
 {

@@ -2,7 +2,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:mapview_mvvm/model/constants.dart';
+import 'package:mapview_mvvm/config/constants.dart';
+import 'package:mapview_mvvm/config/routes.dart';
 import 'package:rxdart/subjects.dart';
 
 import 'splash_viewmodel.dart';
@@ -56,7 +57,7 @@ class SplashScreenView extends StatelessWidget {
 
     Future.delayed(const Duration(milliseconds: 3000), () {
 
-      Navigator.pushReplacementNamed(ctx, 'mapview');
+      Navigator.pushReplacementNamed(ctx, mapViewRoute);
       disposeSubject();
 
 
