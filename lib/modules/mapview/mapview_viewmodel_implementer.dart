@@ -89,7 +89,11 @@ class MapViewViewModelImplementer extends Logger
     return getMarkerIconResized(markerIconImgPath).then((value) {
       markerIcon = value;
       //logger util
-      printMsg(markerIcon.toJson().toString(), 'bindMarkerIcon');
+      printMsg(
+          'Image New Length : ' +
+              markerIcon.toJson().toString().length.toString(),
+          'bindMarkerIcon');
+ 
     });
   }
 }
