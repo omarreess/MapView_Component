@@ -14,10 +14,10 @@ A Clean Google Map Component Implementing MVVM Build with Flutter SDK ( SOLID Pr
 </p>
 <p float="left">
 
-  <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/mvvm%20arch1.png" width="350" />
-   <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/mvvm%20arch3.png" width="350" />  
+  <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/arch1new.png" width="350" />
+   <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/arch2new.png" width="350" />  
 </p>
-
+![alt text](https://github.com/omarreess/MapView_Component/blob/master/screenshot/archtestnew.png)
 ![alt text](https://github.com/omarreess/MapView_Component/blob/master/screenshot/mvvm.png)
 
 
