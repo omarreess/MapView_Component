@@ -1,5 +1,5 @@
 # MapView Component
-A Clean Google Map Component Implementing MVVM Build with Flutter SDK ( SOLID Principles Used )
+A Clean Google Map Component Implementing MVVM Build with Flutter SDK ( SOLID Principles & Unit-Testing Applied )
 
 
  
@@ -11,6 +11,8 @@ A Clean Google Map Component Implementing MVVM Build with Flutter SDK ( SOLID Pr
 
 - Code is made Testable with dependency injection concept , you can test Repo separately & test VM separately without View 
 - Unit Testing is applied in spearte file for testing util functions's logic 
+- Logger abstract class is added for tracking process for each logic class
+- The project contains a little bit of Over Engineering but it's just a side-project not for commercial use 
 
 </p>
 <p float="left">
@@ -39,9 +41,12 @@ Some of SOLID Principles applied :
    so there on unneeded Override for child classes  
 
  - S Single-Responsibility Principle as each Function for only one job
- 
 
- 
+ Unit Testing is Added :
+ - It tests util funcitons's logic 
+ - A Group of testing cases for repaintMarkerIcon() Method is added 
+ - Code Coverage isn't high enough , but it covers the important Methods 
+
  <p float="left">
     <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/archtestnew.png" height="150" />  
 </p>
