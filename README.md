@@ -9,15 +9,17 @@ A Clean Google Map Component Implementing MVVM Build with Flutter SDK ( SOLID Pr
 - Each layer in MVVM separeated from upper layer , dont know about its Upper Layer ( View -> VM -> Repo )
   VM dont care about View dont have View Reference , Just subscribing with VM's Rx Subject which callback with any updates
 
-- Testing is so easly , you can test Repo separately & test VM separately without View 
+- Code is made Testable with dependency injection concept , you can test Repo separately & test VM separately without View 
+- Unit Testing is applied in spearte file for testing util functions's logic 
 
 </p>
 <p float="left">
 
-  <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/arch1new.png" width="350" />
+  <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/arch1new.png" width="300" />
    <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/arch2new.png" width="350" />  
 </p>
-![alt text](https://github.com/omarreess/MapView_Component/blob/master/screenshot/archtestnew.png)
+
+ 
 ![alt text](https://github.com/omarreess/MapView_Component/blob/master/screenshot/mvvm.png)
 
 
@@ -40,5 +42,7 @@ Some of SOLID Principles applied :
  
 
  
- 
+ <p float="left">
+    <img src="https://github.com/omarreess/MapView_Component/blob/master/screenshot/archtestnew.png" height="150" />  
+</p>
  
