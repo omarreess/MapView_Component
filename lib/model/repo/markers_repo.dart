@@ -13,7 +13,12 @@ class MarkersRepo extends Logger {
 //rx Subjects
   late BehaviorSubject markerModelsSubject;
   List? markerModelsList;
+  //increment var
+  double _incVar = 0.02;
+  //for Logger util
+  String className = 'MarkersRepo';
 
+  
   //init
   MarkersRepo() {
     markerModelsSubject = BehaviorSubject<List<Marker>?>();
@@ -46,9 +51,10 @@ class MarkersRepo extends Logger {
   //increment 1st marker's position to be changed
   void incMarkerPosition() {
     markterPostions0 = LatLng(51.807979 - _incVar, 10.340948 + _incVar);
-    
+
     //logger util
-    printMsg('marker postion is updated :${markterPostions0.toString()} ', 'incMarkerPosition');
+    printMsg('marker postion is updated :${markterPostions0.toString()} ',
+        'incMarkerPosition');
 
     markerModelsList!.removeAt(0);
     markerModelsList!.insert(
@@ -79,7 +85,4 @@ class MarkersRepo extends Logger {
     //logger util
     printMsg('rx subject is disposed', 'disposeSubject');
   }
-
-  //increment var
-  double _incVar = 0.02;
 }
